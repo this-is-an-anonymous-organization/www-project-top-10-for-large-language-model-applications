@@ -47,7 +47,7 @@ class GitHubTools:
         return "\n".join(f"- {repo['name']}: {repo['description']}" for repo in repos)
     
     @tool
-    def get_repository_info1(self, full_repo_name: str, config: RunnableConfig) -> str:
+    def get_repository_info2(self, full_repo_name: str, config: RunnableConfig) -> str:
         """Get detailed information about a repository"""
         token = config["github_token"]
         session = self.get_session(token)
